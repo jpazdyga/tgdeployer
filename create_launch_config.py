@@ -20,7 +20,7 @@ def list_asg ():
  print(list_auto_scaling_groups);
 
 def create_lc():
- userdata = '#!/bin/bash\nyum install -y aws-cli\naws s3 cp s3://jblog-test-1/ecs.config /etc/ecs/ecs.config\necho ECS_CLUSTER=test1 >> /etc/ecs/ecs.config';
+ userdata = '#!/bin/bash\nyum install -y aws-cli\naws s3 cp s3://jblog-test-1/ecs.config /etc/ecs/ecs.config\necho ECS_CLUSTER=test1-cluster >> /etc/ecs/ecs.config';
  lc = LaunchConfiguration(name=lcname,
   image_id='ami-8073d3f3',
   instance_type='t2.micro',
