@@ -11,7 +11,7 @@ def list():
    lbname,
   ],
  )
- pprint(list_load_balancers);
+ pprint(list_load_balancers.get('LoadBalancerDescriptions'));
 
 parser = argparse.ArgumentParser(description='Get the AWS Load Balancer details.')
 parser.add_argument('loadbalancer', metavar='lbname', type=str, nargs='+', help='Load balancer name')
